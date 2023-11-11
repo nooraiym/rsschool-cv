@@ -4,11 +4,11 @@
 ===
 
 #### Contact information
-Location: Almaty, Kazakhstan
-Phone: +7 777 843 86 67
-E-mail: nooraiym.nurbulatova@gmail.com
-Discord: nooraiym
-Alternative way to communicate: telegram, linkedin
+**Location:** Almaty, Kazakhstan
+**Phone:** +7 777 843 86 67
+**E-mail:** nooraiym.nurbulatova@gmail.com
+**Discord:** @nooraiym
+*Alternative way to communicate: telegram, linkedin*
 
 ===
 
