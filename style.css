@@ -271,6 +271,69 @@ button, .button {
 
 
 /* --------------------- PROJECTS */
+.projectsList {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: calc((100% - 100px) / 3);
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.7s ease;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project-details h3 {
+  margin: 0;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.project-details h3::after {
+  content: '↗';
+  margin-left: 8px;
+  font-size: 0.8em;
+}
+
+.project-details p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #F26464;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.9em;
+}
+
+
 /* --------------------- EDUCAITON */
 #education {
   padding-bottom: 60px;
