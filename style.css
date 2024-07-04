@@ -81,6 +81,11 @@ button, .button {
   border-radius: 60px;
 }
 
+button:hover, .button:hover {
+  background-color: #F26464;
+  color: #FFF;
+}
+
 /* --------------------- НЕАDER */
 .header {
   position: fixed;
@@ -404,6 +409,46 @@ button, .button {
   margin-bottom: 40px;
 }
 
+.position {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.social {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social li {
+  margin-left: 12px;
+}
+
+.social li:first-child {
+  margin-left: 0;
+}
+
+.social li a {
+  border-radius: 100%;
+  color: #FFF;
+  width: 40px;
+  height: 40px;
+  background-color: #F26464;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+}
+
+.social li a:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
 /* --------------------- FOOTER */
 footer {
   padding: 10px 0;
@@ -434,6 +479,15 @@ footer .requirements {
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+  }
+  .social {
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .social li {
+    margin-left: 0;
   }
 }
 
