@@ -22,12 +22,12 @@
 
                 <nav class="navigation">
                     <ul>
-                        <li><a href="">About me</a></li>
-                        <li><a href="">Skills</a></li>
-                        <li><a href="">Code</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Education</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#about">About me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#code">Code</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#contactInfo">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -70,7 +70,7 @@
         </div>
     </main>
 
-    <section class="about">
+    <section id="about">
         <div class="container">
             <div>
                 <h2>About me</h2>
@@ -81,7 +81,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section id="skills">
         <div class="container">
             <div class="row">
                 <div>
@@ -111,7 +111,7 @@
         </div>
     </section>
 
-    <section class="code">
+    <section id="code">
         <div class="container">
             <div>
                 <h2>Code</h2>
@@ -151,13 +151,19 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section id="projects">
         <div class="container">
             <h2>Projects</h2>
         </div>
     </section>
 
-    <section class="contactInfo">
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+        </div>
+    </section>
+
+    <section id="contactInfo">
         <div class="container">
             <div class="contacts">
                 <span>Stay in touch</span>
@@ -188,6 +194,7 @@
         toggleButton.addEventListener('click', () => {
             toggleContent.style.display = toggleContent.style.display === 'none' ? 'block' : 'none';
         });
+
     </script>
 </body>
 </html>
