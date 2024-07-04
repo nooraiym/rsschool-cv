@@ -26,7 +26,6 @@ body {
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 0.75rem;
 }
 
 a,
@@ -163,8 +162,7 @@ button, .button {
 }
 
 .main section {
-  padding-left: 70px;
-  padding-right: 100px;
+  padding: 0 100px 0 70px;
 }
 
 .main section h1 span {
@@ -215,24 +213,39 @@ button, .button {
 
 
 /* --------------------- SKILLS */
-#skills ul {
-  overflow: auto;
-  white-space: nowrap;
+.skillsList {
+  display: flex;
+  overflow-x: scroll;
+  padding: 0;
+  margin: 0;
   list-style: none;
+  scrollbar-width: none; /* для Firefox */
 }
 
-#skills ul li {
-  display: inline-block;
-  text-align: center;
+.skillsList::-webkit-scrollbar {
+  display: none;
+}
+
+#skills .hidden {
+  overflow-x: hidden;
+}
+
+.skillsList li {
+  flex: 0 0 auto;
+  padding: 0.7em 1.5em;
+  background: #f0f0f0;
+  margin-right: 0.5em;
+  border-radius: 27px;
   color: #373737;
   font-size: 16px;
-  padding: 10px 20px;
-  border: 1px solid #D7D7D7;
-  border-radius: 27px;
-  margin-right: 5px;
-  margin: 15px 5px 0 0;
   font-weight: 500;
+  border: 1px solid #D7D7D7;
 }
+
+.skillsList li:hover {
+  background: #e8e8e8;
+}
+
 
 /* --------------------- CODE */
 #code p {
@@ -258,6 +271,38 @@ button, .button {
 
 
 /* --------------------- PROJECTS */
+/* --------------------- EDUCAITON */
+#education {
+  padding-bottom: 60px;
+}
+
+#education div {
+  width: 100%;
+}
+
+#education table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+#education table td {
+  min-width: 100%;
+  padding: 8px 30px 8px 0;
+}
+
+#education table tr td:nth-child(1){
+  font-style: oblique;
+}
+
+#education table tr td:nth-child(2){
+  font-weight: 800;
+}
+
+#education table tr:hover {
+  background-color: #f2646437;
+}
 
 
 /* --------------------- CONTACTS */
@@ -314,7 +359,7 @@ footer .requirements {
   font-weight: 700;
 }
 
-#link:hover {
+.link:hover {
   cursor: pointer;
 }
 

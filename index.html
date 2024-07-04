@@ -27,7 +27,7 @@
                         <li><a href="#code">Code</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#education">Education</a></li>
-                        <li><a href="#contactInfo">Contact</a></li>
+                        <li><a href="#contactInfo">Contacts</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,7 +39,7 @@
             <div class="row">
                 <div>
                     <figure>
-                        <img src="./img/My profile photo.png" alt="Profile photo">
+                        <img src="./img/profile-photo.png" alt="Profile photo">
                     </figure>
                 </div>
 
@@ -47,7 +47,7 @@
                     <section>
                         <h1>
                             <span>HI THERE</span>
-                            I’m Nuraiym Nurbulatova <br> FRONTEND DEVELOPER based in Almaty, Kazakhstan.
+                            I&#39;m <br> FRONTEND DEVELOPER based in Almaty, Kazakhstan.
                         </h1>
                         <ul class="valueList">
                             <li>
@@ -83,30 +83,28 @@
 
     <section id="skills">
         <div class="container">
-            <div class="row">
-                <div>
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>React</li>
-                        <li>Redux</li>
-                        <li>Jest</li>
-                        <li>Storybook</li>
-                        <li>REST</li>
-                        <li>Axios</li>
-                        <li>Node.js</li>
-                        <li>Github</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Figma</li>
-                        <li>Material UI</li>
-                        <li>jQuery</li>
-                        <li>Bootstrap</li>
-                        <li>Agile</li>
-                        <li>Notion</li>
-                    </ul>
-                </div>
+            <div class="hidden">
+                <h2>Skills</h2>
+                <ul class="skillsList">
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>Jest</li>
+                    <li>Storybook</li>
+                    <li>REST</li>
+                    <li>Axios</li>
+                    <li>Node.js</li>
+                    <li>Github</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Figma</li>
+                    <li>Material UI</li>
+                    <li>jQuery</li>
+                    <li>Bootstrap</li>
+                    <li>Agile</li>
+                    <li>Notion</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -159,7 +157,53 @@
 
     <section id="education">
         <div class="container">
-            <h2>Education</h2>
+            <div>
+                <h2>Education</h2>
+                <table class="styled-table">
+                    <tbody>
+                        <tr>
+                            <td>Feb 2024 - present</td>
+                            <td>Udemy</td>
+                            <td>Web-development with Angela Yu</td>
+                        </tr>
+                        <tr>
+                            <td>Apr 2024 - May 2024</td>
+                            <td>Result Unversity</td>
+                            <td>JavaScript basics and 50 tasks</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 2024 - Feb 2024</td>
+                            <td>Scrimba</td>
+                            <td>JavaScript / TypeScript</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 2024 - Jan 2024</td>
+                            <td>Udemy</td>
+                            <td>WEB-developer, Ivan Petrichenko</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 2023 - Dec 2023</td>
+                            <td>Yandex.Workshop</td>
+                            <td>Git Basics</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 2022 - Nov 2023</td>
+                            <td>Code Basics</td>
+                            <td>HTML, Javascript</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 2023 - Sept 2023</td>
+                            <td>FreeCodeCamp</td>
+                            <td>Learn HTML and CSS, Flexbox</td>
+                        </tr>
+                        <tr>
+                            <td>Sept 2016 - May 2022</td>
+                            <td>Satbayev University</td>
+                            <td>Bachelor of Arts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
@@ -169,7 +213,7 @@
                 <span>Stay in touch</span>
                 <h4>Ready to talk?</h4>
                 <p>Feel free to contact me</p>
-                <a href="mailto:test@test.com" class="button">Lets Talk</a>
+                <a href="mailto:nura.erkinbek.k@gmail.com" class="button">Let&#39;s Talk</a>
             </div>
         </div>
     </section>
@@ -177,8 +221,8 @@
     <footer>
         <div class="container">
             <div class="requirements">
-                <span onclick="location.href='https://rs.school/courses/javascript'">
-                    <img class="link" id="schoolLogo" src="./img/logo.svg" alt="RS School course logo">
+                <span class="link" onclick="location.href='https://rs.school/courses/javascript'">
+                    <img id="schoolLogo" src="./img/logo.svg" alt="RS School course logo">
                 </span>
                 <span class="copyright">© 2024 All rights reserved</span>
                 <span class="link copyright" onclick="location.href='https://github.com/nooraiym'">GitHub</span>
@@ -193,6 +237,27 @@
 
         toggleButton.addEventListener('click', () => {
             toggleContent.style.display = toggleContent.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillsList = document.querySelector('.skillsList');
+            const skillsItems = Array.from(skillsList.children);
+            const totalItems = skillsItems.length;
+            const scrollStep = 1;
+            const scrollInterval = 20; // Время между прокрутками в миллисекундах
+
+            skillsItems.forEach(i => skillsList.appendChild(i.cloneNode(true)));
+
+            function autoScroll() {
+                skillsList.scrollLeft += scrollStep;
+
+                if (skillsList.scrollLeft >= skillsList.scrollWidth / 2) {
+                    skillsList.scrollLeft = 0;
+                }
+                setTimeout(autoScroll, scrollInterval);
+            }
+
+            autoScroll();
         });
 
     </script>
