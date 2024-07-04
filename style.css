@@ -258,6 +258,44 @@ button, .button {
 
 /* --------------------- PROJECTS */
 
+
+/* --------------------- CONTACTS */
+.contactInfo {
+  background-color: #000;
+  padding: 120px 0;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contacts span {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.contacts h4 {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contacts p {
+  letter-spacing: 1.13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+
 /* MEDIA */
 @media (min-width: 576px) {
   .container {
