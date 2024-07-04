@@ -111,6 +111,43 @@
     </section>
 
     <section class="code">
+        <div class="container">
+            <div>
+                <h2>Code</h2>
+                <div class="codeExample">
+                    <p>
+                        <span>Short description:</span>
+                        ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. ROT13 is an example of the Caesar cipher.<br>
+                        <br>
+                        <span>Task is:</span>
+                        Create a function that takes a string and returns the string ciphered with Rot13. If there are numbers or special characters included in the string, they should be returned as they are. Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
+                    </p>
+                    <div>
+                        <button class="toggle-button">Show code</button>
+                        <div class="toggle-content">
+                            <pre>
+                                <code class="language-javascript">
+                                    function caesarCipherRot13&#40;message&#41; &#123;
+                                    let arr &#61; message.split&#40;&#39;&#39;&#41;;
+                                    return arr.map&#40;c &#61;&#62; &#123;
+                                        let code &#61; c.charCodeAt&#40;0&#41;;
+                                        if &#40;code &#62;&#61; 65 && code &#60;&#61; 90&#41; &#123;
+                                            return String.fromCharCode&#40;&#40;code &#45; 65 &#43; 13&#41; &#37; 26 &#43; 65&#41;;
+                                        &#125; else if &#40;code &#62;&#61; 97 && code &#60;&#61; 122&#41; &#123;
+                                            return String.fromCharCode&#40;&#40;code &#45; 97 &#43; 13&#41; &#37; 26 &#43; 97&#41;;
+                                        &#125; else &#123;
+                                            return c;
+                                        &#125;
+                                        &#125;&#41;.join&#40;&#39;&#39;&#41;;
+                                    &#125;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </section>
 
     <section class="projects">
