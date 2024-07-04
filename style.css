@@ -198,6 +198,28 @@ h2 {
   margin-bottom: 60px;
 }
 
+
+/* --------------------- SKILLS */
+.skills ul {
+  overflow: auto;
+  white-space: nowrap;
+  list-style: none;
+}
+
+.skills ul li {
+  display: inline-block;
+  text-align: center;
+  color: #373737;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px solid #D7D7D7;
+  border-radius: 27px;
+  margin-right: 5px;
+  margin: 15px 5px 0 0;
+  font-weight: 500;
+}
+
+
 /* MEDIA */
 @media (min-width: 576px) {
   .container {
