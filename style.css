@@ -53,6 +53,18 @@ img {
   height: auto;
 }
 
+h2 {
+  display: inline-block;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border-bottom: 3px solid #F26464;
+  padding-bottom: 7px;
+  margin-bottom: 23px;
+}
+
 
 /* --------------------- НЕАDER */
 .header {
@@ -177,6 +189,14 @@ img {
   letter-spacing: 1px;
 }
 
+/* --------------------- ABOUT */
+.about p {
+  color: #373737;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  margin-bottom: 60px;
+}
 
 /* MEDIA */
 @media (min-width: 576px) {
