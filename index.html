@@ -3,8 +3,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+    <link href="style.css" rel="stylesheet">
+    <title>Nuraiym Nurbulatova&#39;s CV</title>
 </head>
 <body>
+    <header id="site-header" class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="header-logo">
+                    <span>N</span>Nuraiym Nurbulatova
+                </a>
+
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#about">About me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#code">Code</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#contactInfo">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <figure>
+                        <img src="./img/profile-photo.png" alt="Profile photo">
+                    </figure>
+                </div>
+
+                <div>
+                    <section>
+                        <h1>
+                            <span>HI THERE</span>
+                            I&#39;m <br> FRONTEND DEVELOPER based in Almaty, Kazakhstan.
+                        </h1>
+                        <ul class="valueList">
+                            <li>
+                                <strong>1,5&#43;</strong>
+                                <span>Experience</span>
+                            </li>
+                            <li>
+                                <strong>8</strong>
+                                <span>Projects</span>
+                            </li>
+                            <li>
+                                <strong>300&#43;</strong>
+                                <span>Codewars Tasks</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section id="about">
+        <div class="container">
+            <div>
+                <h2>About me</h2>
+                <p>
+                    I&#39;m a passionate frontend developer who loves to create beautiful and performant user interfaces. With a keen eye for design and a strong understanding of modern web technologies, I strive to bridge the gap between graphical design and technical implementation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="hidden">
+                <h2>Skills</h2>
+                <ul class="skillsList">
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>Jest</li>
+                    <li>Storybook</li>
+                    <li>REST</li>
+                    <li>Axios</li>
+                    <li>Node.js</li>
+                    <li>Github</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Figma</li>
+                    <li>Material UI</li>
+                    <li>jQuery</li>
+                    <li>Bootstrap</li>
+                    <li>Agile</li>
+                    <li>Notion</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="code">
+        <div class="container">
+            <div>
+                <h2>Code</h2>
+                <div class="codeExample">
+                    <p>
+                        <span>Short description:</span>
+                        ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. ROT13 is an example of the Caesar cipher.<br>
+                        <br>
+                        <span>Task is:</span>
+                        Create a function that takes a string and returns the string ciphered with Rot13. If there are numbers or special characters included in the string, they should be returned as they are. Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
+                    </p>
+                    <div>
+                        <button class="toggle-button">Show code</button>
+                        <div class="toggle-content">
+                            <pre>
+                                <code class="language-javascript">
+                                    function caesarCipherRot13&#40;message&#41; &#123;
+                                    let arr &#61; message.split&#40;&#39;&#39;&#41;;
+                                    return arr.map&#40;c &#61;&#62; &#123;
+                                        let code &#61; c.charCodeAt&#40;0&#41;;
+                                        if &#40;code &#62;&#61; 65 && code &#60;&#61; 90&#41; &#123;
+                                            return String.fromCharCode&#40;&#40;code &#45; 65 &#43; 13&#41; &#37; 26 &#43; 65&#41;;
+                                        &#125; else if &#40;code &#62;&#61; 97 && code &#60;&#61; 122&#41; &#123;
+                                            return String.fromCharCode&#40;&#40;code &#45; 97 &#43; 13&#41; &#37; 26 &#43; 97&#41;;
+                                        &#125; else &#123;
+                                            return c;
+                                        &#125;
+                                        &#125;&#41;.join&#40;&#39;&#39;&#41;;
+                                    &#125;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div>
+                <h2>Projects</h2>
+                <div class="projectsList">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <a href="https://github.com/nooraiym/project-todolist" class="github-badge" target="_blank">GitHub</a>
+                            <img src="./img/projects/todolist.png" alt="Todolist App Project Image">
+                        </div>
+                        <div class="project-details link" onclick="location.href='https://nooraiym.github.io/project-todolist/'">
+                            <h3>Todolist App</h3>
+                            <p>
+                                It is a simple and intuitive web application that allows users to create, manage, and track their tasks and to-do lists. With the Todolist App, users can easily add new tasks, mark them as completed, edit or delete existing tasks, and filter tasks by status. The app is designed to be user-friendly and easy to navigate, with a clean and modern interface.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Redux</span>
+                                <span class="tag">Jest</span>
+                                <span class="tag">REST API</span>
+                                <span class="tag">CSS Modules</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <a href="https://github.com/nooraiym/samurai-way" class="github-badge" target="_blank">GitHub</a>
+                            <img src="./img/projects/socialNetwork.png" alt="Social Network Project Image">
+                        </div>
+                        <div class="project-details link" onclick="location.href='https://nooraiym.github.io/samurai-way/'">
+                            <h3>Social Network</h3>
+                            <p>
+                                This project is a simple social network web application designed to demonstrate the use of modern web development tools and practices. It includes features like user profiles, friend connections, posts, and real-time updates.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Redux</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">React Router Dom</span>
+                                <span class="tag">Styled Components</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <a href="https://github.com/nooraiym/todolist-for-one-day" class="github-badge" target="_blank">GitHub</a>
+                            <img src="./img/projects/todolistForOneDay.png" alt="Portfolio Template Project Image">
+                        </div>
+                        <div class="project-details link" onclick="location.href='https://nooraiym.github.io/todolist-for-one-day/'">
+                            <h3>Todolist for daytime tasks</h3>
+                            <p>
+                                This is a web application that helps users manage their daily tasks and activities. With the app, users can create to-do lists for specific times of the day, such as morning, afternoon, or evening, and prioritize their tasks based on importance and urgency.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">React</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <a href="https://github.com/nooraiym/project-portfolio" class="github-badge" target="_blank">GitHub</a>
+                            <img src="./img/projects/portfolioTemplate.png" alt="Portfolio Template Project Image">
+                        </div>
+                        <div class="project-details link" onclick="location.href='https://nooraiym.github.io/project-portfolio/'">
+                            <h3>Portfolio Template</h3>
+                            <p>
+                                This project involves the development of a static portfolio website designed to showcase personal or professional work in a visually appealing and organized manner. The main objective is to create a user-friendly platform that effectively displays skills, projects, and experiences to potential employers or clients.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Styled Components</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <a href="https://github.com/nooraiym/project-solana" class="github-badge" target="_blank">GitHub</a>
+                            <img src="./img/projects/solana.png" alt="Solana's webpage clone">
+                        </div>
+                        <div class="project-details link" onclick="location.href='https://nooraiym.github.io/project-solana/'">
+                            <h3>Solana's main page clone</h3>
+                            <p>
+                                It is a simple and intuitive web application that allows users to create, manage, and track their tasks and to-do lists. With the Todolist App, users can easily add new tasks, mark them as completed, edit or delete existing tasks, and filter tasks by status. The app is designed to be user-friendly and easy to navigate, with a clean and modern interface.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">React</span>
+                                <span class="tag">CSS Modules</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <div>
+                <h2>Education</h2>
+                <table class="styled-table">
+                    <tbody>
+                        <tr>
+                            <td>Jan 2024 - present</td>
+                            <td>EF SET</td>
+                            <td>English level - B2</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 2024 - present</td>
+                            <td>Udemy</td>
+                            <td>Web-development with Angela Yu</td>
+                        </tr>
+                        <tr>
+                            <td>Apr 2024 - May 2024</td>
+                            <td>Result Unversity</td>
+                            <td>JavaScript basics and 50 tasks</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 2024 - Feb 2024</td>
+                            <td>Scrimba</td>
+                            <td>JavaScript / TypeScript</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 2024 - Jan 2024</td>
+                            <td>Udemy</td>
+                            <td>WEB-developer, Ivan Petrichenko</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 2023 - Dec 2023</td>
+                            <td>Yandex.Workshop</td>
+                            <td>Git Basics</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 2022 - Nov 2023</td>
+                            <td>Code Basics</td>
+                            <td>HTML, Javascript</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 2023 - Sept 2023</td>
+                            <td>FreeCodeCamp</td>
+                            <td>Learn HTML and CSS, Flexbox</td>
+                        </tr>
+                        <tr>
+                            <td>Sept 2016 - May 2022</td>
+                            <td>Satbayev University</td>
+                            <td>Bachelor of Arts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contactInfo">
+        <div class="container">
+            <div class="position">
+                <div class="contacts">
+                    <span>Stay in touch</span>
+                    <h4>Ready to talk?</h4>
+                    <p>Feel free to contact me</p>
+                    <a href="mailto:nura.erkinbek.k@gmail.com" class="button">Let&#39;s Talk</a>
+                </div>
+                <ul class="social">
+                    <li><a href="https://github.com/nooraiym" target="_blank"><i class="ri-github-fill"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/nurayim-nurbulatova" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+                    <li><a href="https://t.me/nooraiym_n" target="_blank"><i class="ri-telegram-fill"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="requirements">
+                <span class="link" onclick="location.href='https://rs.school/courses/javascript'">
+                    <img id="schoolLogo" src="./img/logo.svg" alt="RS School course logo">
+                </span>
+                <span class="copyright">&#169; 2024 All rights reserved</span>
+                <span class="link copyright" onclick="location.href='https://github.com/nooraiym'">GitHub</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script>
+        const toggleButton = document.querySelector('.toggle-button');
+        const toggleContent = document.querySelector('.toggle-content');
+
+        toggleButton.addEventListener('click', () => {
+            toggleContent.style.display = toggleContent.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillsList = document.querySelector('.skillsList');
+            const skillsItems = Array.from(skillsList.children);
+            const totalItems = skillsItems.length;
+            const scrollStep = 1;
+            const scrollInterval = 20; // Время между прокрутками в миллисекундах
+
+            skillsItems.forEach(i => skillsList.appendChild(i.cloneNode(true)));
+
+            function autoScroll() {
+                skillsList.scrollLeft += scrollStep;
+
+                if (skillsList.scrollLeft >= skillsList.scrollWidth / 2) {
+                    skillsList.scrollLeft = 0;
+                }
+                setTimeout(autoScroll, scrollInterval);
+            }
+
+            autoScroll();
+        });
+
+    </script>
 </body>
 </html>
