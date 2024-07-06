@@ -44,7 +44,6 @@ button {
 
 section {
   padding-top: 100px;
-
 }
 
 img {
@@ -78,7 +77,7 @@ button, .button {
   color: #F26464;
   padding: 17px 30px;
   border: 2px solid #F26464;
-  border-radius: 60px;
+  border-radius: 10px;
 }
 
 button:hover, .button:hover {
@@ -143,6 +142,7 @@ button:hover, .button:hover {
 .navigation ul {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
   gap: 22px;
   flex-wrap: wrap;
 }
@@ -240,7 +240,7 @@ button:hover, .button:hover {
   padding: 0.7em 1.5em;
   background: #f0f0f0;
   margin-right: 0.5em;
-  border-radius: 27px;
+  border-radius: 10px;
   color: #373737;
   font-size: 16px;
   font-weight: 500;
@@ -290,6 +290,7 @@ button:hover, .button:hover {
   max-width: calc((100% - 100px) / 3);
   width: 100%;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 .project-card:hover {
@@ -300,6 +301,22 @@ button:hover, .button:hover {
 .project-image img {
   width: 100%;
   height: auto;
+}
+
+.github-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #F26464;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.github-badge:hover {
+  background-color: #444d56;
 }
 
 .project-details {
@@ -331,9 +348,9 @@ button:hover, .button:hover {
 }
 
 .tag {
-  background-color: #F26464;
+  background-color: #444d56;
   color: #ffffff;
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 5px 10px;
   font-size: 0.9em;
 }
@@ -358,6 +375,10 @@ button:hover, .button:hover {
 #education table td {
   min-width: 100%;
   padding: 8px 30px 8px 0;
+}
+
+#education table tr:first-of-type {
+  font-weight: 800;
 }
 
 #education table tr td:nth-child(1){
@@ -476,10 +497,99 @@ footer .requirements {
 }
 
 /* MEDIA */
-@media (min-width: 576px) {
+@media (max-width: 576px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  section {
+    padding-top: 50px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .main section {
+    padding: 0;
+  }
+  .main section h1{
+    padding-top: 40px;
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+    #code p {
+    max-width: 100%;
+  }
+
+  .codeExample {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .social {
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .social li {
+    margin: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
   .container {
     max-width: 540px;
+    padding: 0 20px;
   }
+
+  section {
+    padding-top: 50px;
+  }
+
+  section:first-of-type {
+    padding-top: 160px;
+  }
+
+  .main section h1{
+    padding-top: 40px;
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .main section {
+    padding: 0 30px 0;
+  }
+
+  .main.row {
+    position: relative;
+  }
+
+  .valueList {
+    position: absolute;
+    top: 530px;
+    left: 16%;
+  }
+
+  #code p {
+    max-width: 100%;
+  }
+
+  .codeExample {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
   .social {
     flex-direction: column;
     gap: 14px;
@@ -494,12 +604,41 @@ footer .requirements {
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
     max-width: 720px;
+    padding: 0 30px;
   }
+
+  section {
+    padding-top: 70px;
+  }
+
+  .main section h1{
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .main section {
+    padding: 0 30px 0;
+  }
+
+  #about p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .project-card {
+    max-width: calc((100% - 60px) / 2);
+  }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .container {
     max-width: 960px;
+    padding: 0 40px;
+  }
+
+  .valueList {
+    gap: 40px;
   }
 }
 
